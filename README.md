@@ -12,8 +12,15 @@ Consider a flight from Dallas to Paris. It’s possible that there is a direct f
 In this example, an arrow from one city to another indicates the direction of travel. The opposite direction is not possible unless a similar arrow is present in the graph. For this programming challenge, each arrow or flight path would also have a cost associated with it. If we wanted to travel from El Paso to city Chicago, we would have to pass through Detroit. This would be a trip with two legs. It is possible that there might not be a path from one city to another city.  In this case, you’d print an error message indicating such. 
 In forming a flight plan from a set of flight legs, one must consider the possibility of cycles. In Figure 1, notice there is a cycle involving Chicago, Fresno, and Greensboro. In a flight plan from city X to city Y, a particular city should appear no more than one time. 
 The input file for flight data will represent a sequence of origin/destination city pairs with a cost of that flight. The first line of the input file will contain an integer which indicates the total number of origin/destination pairs contained in the file. 
- 
+
+
+***Both Request Flights and Flight Data Files are given in MyFlightData.zip***
+
+ <img width="520" alt="Screenshot 2023-06-14 121719" src="https://github.com/SaileshAndra/Dijkstras_FlightPath/assets/38543086/025beea6-038d-466e-8fe7-551befceac1a">
+
 Figure 1 - Sample Directed Graph
+
+
 
 Sample Data
 
@@ -48,6 +55,12 @@ Path 2: Chicago -> Austin -> Houston -> Dallas. Time: 282 Cost: 340.00
 Implementation Details and Requirements:
 In order to store the structure representing flights serviced by the company, you will implement a simple adjacency list data structure. Essentially, it will be a linked list of linked lists. There will be one linked list for every distinct city. Each list will contain the cities (and other needed info) that can be reached from this city. Figure 2 is an example representation of an adjacency list for the graph in Figure 1. 
 
+
+
+
+
+
+<img width="387" alt="Screenshot 2023-04-30 204105" src="https://github.com/SaileshAndra/Dijkstras_FlightPath/assets/38543086/9c923d7e-a7f9-48b9-adfc-346c01db74df">
 
 
 Figure 2 - Adjacency list representation of graph from Figure 1.  Letter in node represents first letter of city name from Figure 1. 
