@@ -69,63 +69,7 @@ public class Graph {
 	}
 	
 	
-	/*public void dfs(String start, String end) {
-	    for (int i = 0; i < visited.length; i++) {
-	        visited[i] = false;
-	    }
-
-	    Stack<Node> stack = new Stack<>();
-
-	    Node startNode = null;
-	    for (int i = 0; i < alist.size(); i++) {
-	        if (alist.get(i).get(0).data.equals(start)) {
-	            startNode = alist.get(i).get(0);
-	            break;
-	        }
-	    }
-	    if (startNode == null) {
-	        System.out.println("Start node not found in the graph.");
-	        return;
-	    }
-	    stack.push(startNode);
-
-	    int totalTime = 0;
-	    int totalCost = 0;
-
-	    while (!stack.isEmpty()) {
-	        Node currentNode = stack.pop();
-	        int nodeIndex = -1;
-	        for (int i = 0; i < alist.size(); i++) {
-	            if (alist.get(i).get(0).data.equals(currentNode.data)) {
-	                nodeIndex = i;
-	                break;
-	            }
-	        }
-
-	        if (nodeIndex == -1) {
-	            System.out.println("Node not found in the graph.");
-	            return;
-	        }
-
-	        if (!visited[nodeIndex]) {
-	            System.out.print(currentNode.data + " -> ");
-	            visited[nodeIndex] = true;
-	            totalTime += currentNode.time;
-	            totalCost += currentNode.cost;
-
-	            LinkedList<Node> neighbors = alist.get(nodeIndex);
-	            for (int i = 1; i < neighbors.size(); i++) {
-	                stack.push(neighbors.get(i));
-	            }
-	            if (currentNode.data.equals(end)) {
-	                break;
-	            }
-	        }
-	    }
-
-	    System.out.println(" Total Cost($): " + totalCost+ " Total Time(Minutes): " + totalTime);
-	   
-	}*/
+	
 	public void dfs(String start, String end, int limit,PrintWriter printWriter) {
 	    for (int i = 0; i < visited.length; i++) {
 	        visited[i] = false;
